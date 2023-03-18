@@ -41,18 +41,24 @@ nav {
     justify-content: space-between;
     align-items: center;
 
+
+}
+
+nav button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
 }
 
 nav h1 {
     font-weight: 800;
-    font-size: 70px;
+    font-size: 80px;
     font-family: serif;
     padding-left: 10px;
+    margin-bottom: 15px;
 }
 
-#icon-menu-close {
-    display: none;
-}
+
 
 #icon-menu {
     height: 36px;
@@ -60,9 +66,44 @@ nav h1 {
 
 }
 
-ul {
+.menu {
+    display: block;
+    width: 70vw;
+    min-height: 100vh;
+    background-color: var(--White);
+    z-index: 97;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    padding-top: 120px;
+
+    transition: .43s ease-in-out;
+}
+
+.menu-1 {
     display: none;
 }
+
+.is-active {
+    right: 0;
+}
+
+.menu li {
+    list-style: none;
+    padding: 16px;
+    margin-left: 10px;
+}
+
+#icon-menu,
+#hamburger,
+#icon-menu-close,
+#cross-mark {
+    z-index: 99;
+
+}
+
+
+
 
 a:hover {
     color: var(--Soft-red);
@@ -191,22 +232,37 @@ footer h2 {
 
     }
 
+
+
+
+
     nav {
         grid-column: span 3;
-    }
-
-    #icon-menu {
-        display: none;
-    }
-
-    ul {
-        display: block;
-        list-style: none;
         display: flex;
     }
 
-    li {
+
+    .menu-1 {
+        display: block;
+    }
+
+    .menu-1 ul {
+        display: flex;
+
+    }
+
+    .menu-1 li {
+        display: inline;
+        list-style: none;
         margin-right: 16px;
+
+    }
+
+    #icon-menu,
+    #hamburger,
+    #icon-menu-close,
+    #cross-mark {
+        display: none;
 
     }
 
